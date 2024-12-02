@@ -1,0 +1,374 @@
+@charset "UTF-8";
+/* Estilização do menu */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d5e8d4; /* Verde claro */
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu-container a:hover {
+  color: #6b8e23; /* Verde escuro */
+}
+
+/* Estrutura principal */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  display: flex;
+  height: 100vh; /* Ocupa toda a altura da janela */
+  align-items: stretch; /* Faz as colunas ocuparem alturas iguais */
+}
+
+/* Estilo da seção de logo (esquerda) */
+.logo-section {
+  background-color: #d5e8d4; /* Verde claro */
+  width: 30%; /* Largura da coluna esquerda */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 200px;
+  height: 200px;
+  background-image: url("https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1024,h_1024/https://abrigoanimal.org.br/wp-content/uploads/2019/05/cropped-Logo_Abrigo-Animal-Joinville-2.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-section h1 {
+  font-family: "Alegreya";
+  font-size: 60px;
+  margin: 0;
+  color: #000;
+}
+
+.subtitle {
+  font-family: "Alegreya";
+  font-size: 50px;
+  color: #8a6d3b; /* Dourado mais escuro para melhor contraste */
+  margin-top: 5px;
+}
+
+/* Estilo da seção do slider (direita) */
+.slider-section {
+  width: 70%; /* Largura da coluna direita */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden; /* Remove transbordos */
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%; /* O carrossel ocupa toda a altura */
+  overflow: hidden; /* Remove qualquer transbordo */
+  border: 5px solid #d5e8d4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.slider {
+  display: flex;
+  height: 100%; /* As imagens herdam a altura total */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  flex-shrink: 0;
+  width: 100%; /* Garante que as imagens ocupem toda a largura */
+  height: 100%; /* Garante que as imagens ocupem toda a altura */
+  -o-object-fit: cover;
+     object-fit: cover; /* Mantém proporções e corta excessos */
+}
+
+/* Estilo das imagens dentro do carrossel */
+.animal-image img {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+}
+
+/* Estilo do rodapé */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #d5e8d4; /* Verde claro */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.footer-section {
+  width: 30%;
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #444;
+}
+
+.footer-section p:nth-child(2) {
+  margin-top: 15px;
+}
+
+.text-section {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #d5e8d4; /* Verde claro */
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.text-section h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.map-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9; /* Fundo cinza claro */
+}
+
+.map-section h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 10px; /* Espaço interno */
+  border: 15px solid #d5e8d4; /* Cor verde da página principal */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #ffffff; /* Fundo branco */
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+/* Estilização para a seção de informações adicionais */
+.info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espaço entre os elementos */
+  padding: 20px;
+  background-color: #d5e8d4; /* Verde claro */
+  border-top: 2px solid #6b8e23; /* Linha de separação */
+}
+
+/* Logo */
+.logo-container img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%; /* Para manter um formato circular */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto informativo */
+.info-text {
+  max-width: 400px;
+}
+
+.info-text h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.info-text p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.info-text h3 {
+  font-size: 20px;
+  color: #6b8e23; /* Verde escuro */
+  font-weight: bold;
+}
+
+/* Estilo para a página do brechó */
+.brecho-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.brecho-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #6b8e23; /* Verde escuro */
+}
+
+/* Lista de roupas */
+.roupas-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Estilo para cada roupa */
+.roupa {
+  background-color: #6b8e23; /* Verde */
+  color: white;
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.roupa:hover {
+  transform: scale(1.05); /* Aumenta um pouco o tamanho da roupa ao passar o mouse */
+}
+
+.roupa img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.roupa h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.roupa p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.subtitulos {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.subtitulos h2 {
+  font-size: 2em;
+  color: #030303; /* Mantendo a mesma cor para todos os textos */
+}
+
+.subtitulo-menor {
+  font-size: 0.8em; /* Reduzindo o tamanho da fonte do subtítulo menor */
+  color: #030303; /* Cor para o texto menor */
+  margin-top: 10px;
+}
+
+/* Para o título "Brechó Abrigo Animal" na página brecho.php */
+.brecho-container h1 {
+  font-family: "Alegreya", serif; /* A mesma fonte usada no título do index.php */
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #6b8e23; /* Cor verde escuro */
+}
+
+.filtro-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os filtros se ajustem à largura da tela */
+  gap: 15px; /* Espaço entre os filtros */
+}
+
+.filtro-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.filtro-container select, .filtro-container input {
+  width: 150px; /* Define a largura dos campos */
+  padding: 5px;
+}
+
+.filtro-container button {
+  padding: 10px 20px;
+  background-color: #d5e8d4; /* Cor de fundo do botão */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.filtro-container button:hover {
+  background-color: #45a049; /* Cor do botão quando o mouse passar sobre ele */
+}
+
+.limpar-btn {
+  background-color: #f44336; /* Cor vermelha */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.limpar-btn:hover {
+  background-color: #d32f2f; /* Cor vermelha mais escura */
+}
+
+a {
+  color: #6b8e23; /* Cor preta ou qualquer cor que você prefira */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+a:hover {
+  text-decoration: underline; /* Adiciona sublinhado quando o mouse passar sobre o link */
+  color: #45a049; /* Cor que você deseja quando passar o mouse (opcional) */
+}/*# sourceMappingURL=styles.css.map */
